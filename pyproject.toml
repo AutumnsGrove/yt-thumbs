@@ -1,0 +1,17 @@
+[project]
+name = "yt-thumbs"
+version = "0.1.0"
+description = "Fast and simple YouTube thumbnail extractor"
+readme = "README.md"
+authors = [
+    { name = "Autumn brown", email = "35852011+AutumnsGrove@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+yt-thumb = "yt_thumbs.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -13,18 +13,26 @@ Fast and simple YouTube thumbnail extractor. Get thumbnail URLs or download high
 
 ## Installation
 
-### Using UV (Recommended)
+### Using UV Tool (Recommended)
+
+Install as a UV tool for global access:
 
 ```bash
-uv pip install yt-thumbs
+uv tool install yt-thumbs
 ```
 
-### From Source
+Or install from source:
 
 ```bash
 git clone https://github.com/yourusername/yt-thumbs.git
 cd yt-thumbs
-uv pip install -e .
+uv tool install .
+```
+
+### Using pip
+
+```bash
+pip install yt-thumbs
 ```
 
 ## Usage

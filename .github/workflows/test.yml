@@ -1,0 +1,97 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: |
+          uv pip install --system -e ".[dev]"
+
+      - name: Run Ruff linting
+        run: |
+          uv pip install --system ruff
+          ruff check src tests
+
+      - name: Run Ruff format check
+        run: |
+          ruff format --check src tests
+
+      - name: Run mypy type checking
+        run: |
+          uv pip install --system mypy
+          mypy src/yt_thumbs --strict
+
+      - name: Run tests with coverage
+        run: |
+          pytest --cov=src/yt_thumbs --cov-report=xml --cov-report=term-missing
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          file: ./coverage.xml
+          fail_ci_if_error: false
+          # To enable Codecov:
+          # 1. Sign up at https://codecov.io/ and add your repository
+          # 2. Get your CODECOV_TOKEN from Codecov dashboard
+          # 3. Add it to GitHub: Settings → Secrets → Actions → New repository secret
+          # 4. Name: CODECOV_TOKEN, Value: your-token-here
+          # 5. Uncomment the line below:
+          # token: ${{ secrets.CODECOV_TOKEN }}
+
+  quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: |
+          uv pip install --system ruff mypy
+
+      - name: Check ruff version
+        run: ruff --version
+
+      - name: Lint with Ruff
+        run: ruff check --output-format=github src tests
+
+      - name: Check formatting with Ruff
+        run: ruff format --check src tests
+
+      - name: Type check with mypy
+        run: mypy src/yt_thumbs --strict

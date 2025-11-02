@@ -1,5 +1,11 @@
 # yt-thumbs
 
+[![Tests](https://github.com/AutumnsGrove/YT_Thumbs/actions/workflows/test.yml/badge.svg)](https://github.com/AutumnsGrove/YT_Thumbs/actions/workflows/test.yml)
+[![PyPI version](https://badge.fury.io/py/yt-thumbs.svg)](https://badge.fury.io/py/yt-thumbs)
+[![Python versions](https://img.shields.io/pypi/pyversions/yt-thumbs.svg)](https://pypi.org/project/yt-thumbs/)
+[![codecov](https://codecov.io/gh/AutumnsGrove/YT_Thumbs/branch/main/graph/badge.svg)](https://codecov.io/gh/AutumnsGrove/YT_Thumbs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Fast and simple YouTube thumbnail extractor. Get thumbnail URLs or download high-quality thumbnail images from YouTube videos with a single command.
 
 ## Features
@@ -176,13 +182,27 @@ uv pip install -e .
 ### Running Tests
 
 ```bash
-uv run pytest tests/
+# Run tests with coverage
+uv run pytest --cov=src/yt_thumbs --cov-report=term-missing
+
+# Or with dev dependencies installed
+pytest
 ```
 
-### Code Formatting
+### Code Quality
 
 ```bash
-black .
+# Linting
+ruff check src tests
+
+# Format checking
+ruff format --check src tests
+
+# Format code
+ruff format src tests
+
+# Type checking
+mypy src/yt_thumbs --strict
 ```
 
 ## Requirements

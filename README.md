@@ -1,9 +1,9 @@
-# yt-thumbs
+# yt-thumbss
 
-[![Tests](https://github.com/AutumnsGrove/YT_Thumbs/actions/workflows/test.yml/badge.svg)](https://github.com/AutumnsGrove/YT_Thumbs/actions/workflows/test.yml)
-[![PyPI version](https://badge.fury.io/py/yt-thumbs.svg)](https://badge.fury.io/py/yt-thumbs)
-[![Python versions](https://img.shields.io/pypi/pyversions/yt-thumbs.svg)](https://pypi.org/project/yt-thumbs/)
-[![codecov](https://codecov.io/gh/AutumnsGrove/YT_Thumbs/branch/main/graph/badge.svg)](https://codecov.io/gh/AutumnsGrove/YT_Thumbs)
+[![Tests](https://github.com/AutumnsGrove/yt-thumbss/actions/workflows/test.yml/badge.svg)](https://github.com/AutumnsGrove/yt-thumbss/actions/workflows/test.yml)
+[![PyPI version](https://badge.fury.io/py/yt-thumbss.svg)](https://badge.fury.io/py/yt-thumbss)
+[![Python versions](https://img.shields.io/pypi/pyversions/yt-thumbss.svg)](https://pypi.org/project/yt-thumbss/)
+[![codecov](https://codecov.io/gh/AutumnsGrove/yt-thumbss/branch/main/graph/badge.svg)](https://codecov.io/gh/AutumnsGrove/yt-thumbss)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Fast and simple YouTube thumbnail extractor. Get thumbnail URLs or download high-quality thumbnail images from YouTube videos with a single command.
@@ -24,21 +24,21 @@ Fast and simple YouTube thumbnail extractor. Get thumbnail URLs or download high
 Install as a UV tool for global access:
 
 ```bash
-uv tool install yt-thumbs
+uv tool install yt-thumbss
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/yt-thumbs.git
-cd yt-thumbs
+git clone https://github.com/yourusername/yt-thumbss.git
+cd yt-thumbss
 uv tool install .
 ```
 
 ### Using pip
 
 ```bash
-pip install yt-thumbs
+pip install yt-thumbss
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ pip install yt-thumbs
 Simply print the thumbnail URL to stdout:
 
 ```bash
-yt-thumb https://www.youtube.com/watch?v=dQw4w9WgXcQ
+yt-thumbs https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 Output:
@@ -61,7 +61,7 @@ https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg
 Download the thumbnail image to disk:
 
 ```bash
-yt-thumb https://www.youtube.com/watch?v=dQw4w9WgXcQ --download
+yt-thumbs https://www.youtube.com/watch?v=dQw4w9WgXcQ --download
 ```
 
 This saves the thumbnail as `dQw4w9WgXcQ.jpg` in the current directory.
@@ -71,7 +71,7 @@ This saves the thumbnail as `dQw4w9WgXcQ.jpg` in the current directory.
 Specify a custom filename for the downloaded thumbnail:
 
 ```bash
-yt-thumb https://www.youtube.com/watch?v=dQw4w9WgXcQ --download --output my-thumbnail.jpg
+yt-thumbs https://www.youtube.com/watch?v=dQw4w9WgXcQ --download --output my-thumbnail.jpg
 ```
 
 ### Supported URL Formats
@@ -80,22 +80,22 @@ All common YouTube URL formats are supported:
 
 ```bash
 # Standard watch URL
-yt-thumb https://www.youtube.com/watch?v=dQw4w9WgXcQ
+yt-thumbs https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 # Short URL
-yt-thumb https://youtu.be/dQw4w9WgXcQ
+yt-thumbs https://youtu.be/dQw4w9WgXcQ
 
 # Embed URL
-yt-thumb https://www.youtube.com/embed/dQw4w9WgXcQ
+yt-thumbs https://www.youtube.com/embed/dQw4w9WgXcQ
 
 # URLs without protocol (http/https)
-yt-thumb youtube.com/watch?v=dQw4w9WgXcQ
+yt-thumbs youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 ## CLI Options
 
 ```
-usage: yt-thumb [-h] [--download] [--output OUTPUT] url
+usage: yt-thumbs [-h] [--download] [--output OUTPUT] url
 
 Extract YouTube thumbnail URLs and download thumbnails
 
@@ -121,10 +121,10 @@ https://youtu.be/wiTbtugbhgw
 EOF
 
 # Process all URLs and output markdown table
-yt-thumb --batch urls.txt
+yt-thumbs --batch urls.txt
 
 # Or save to a file
-yt-thumb --batch urls.txt --output results.md
+yt-thumbs --batch urls.txt --output results.md
 ```
 
 Output format:
@@ -139,21 +139,21 @@ Output format:
 ### Piping URL to clipboard (macOS)
 
 ```bash
-yt-thumb https://youtu.be/dQw4w9WgXcQ | pbcopy
+yt-thumbs https://youtu.be/dQw4w9WgXcQ | pbcopy
 ```
 
 ### Batch download multiple thumbnails
 
 ```bash
 cat video_urls.txt | while read url; do
-  yt-thumb "$url" --download
+  yt-thumbs "$url" --download
 done
 ```
 
 ### Download with custom naming
 
 ```bash
-yt-thumb https://youtu.be/dQw4w9WgXcQ --download --output thumbnails/rick-roll.jpg
+yt-thumbs https://youtu.be/dQw4w9WgXcQ --download --output thumbnails/rick-roll.jpg
 ```
 
 ## How It Works
@@ -172,8 +172,8 @@ YouTube provides thumbnail images at predictable URLs based on the video ID. Thi
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/yt-thumbs.git
-cd yt-thumbs
+git clone https://github.com/yourusername/yt-thumbss.git
+cd yt-thumbss
 
 # Install in development mode
 uv pip install -e .
@@ -218,7 +218,7 @@ MIT License - See LICENSE file for details
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Why yt-thumbs?
+## Why yt-thumbss?
 
 - **Fast**: No heavy dependencies like yt-dlp or pytube
 - **Simple**: One command to get what you need

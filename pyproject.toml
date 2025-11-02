@@ -19,7 +19,7 @@ dev = [
 ]
 
 [project.scripts]
-yt-thumb = "yt_thumbs.cli:main"
+yt-thumbs = "yt_thumbs.cli:main"
 
 [build-system]
 requires = ["hatchling"]

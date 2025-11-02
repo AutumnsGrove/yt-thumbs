@@ -1,5 +1,5 @@
 """
-Pytest fixtures for YT_Thumbs tests
+Pytest fixtures for yt-thumbs tests
 """
 
 from unittest.mock import MagicMock

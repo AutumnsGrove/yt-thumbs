@@ -1,1 +1,1 @@
-"""Tests package for YT_Thumbs."""
+"""Tests package for yt-thumbs."""

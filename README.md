@@ -30,7 +30,7 @@ uv tool install yt-thumbs
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/yt-thumbs.git
+git clone https://github.com/AutumnsGrove/yt-thumbs.git
 cd yt-thumbs
 uv tool install .
 ```
@@ -172,7 +172,7 @@ YouTube provides thumbnail images at predictable URLs based on the video ID. Thi
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/yt-thumbs.git
+git clone https://github.com/AutumnsGrove/yt-thumbs.git
 cd yt-thumbs
 
 # Install in development mode

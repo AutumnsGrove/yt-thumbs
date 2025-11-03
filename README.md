@@ -1,12 +1,12 @@
-# yt-thumbss
+# yt-thumbs
 
-[![Tests](https://github.com/AutumnsGrove/yt-thumbss/actions/workflows/test.yml/badge.svg)](https://github.com/AutumnsGrove/yt-thumbss/actions/workflows/test.yml)
-[![PyPI version](https://badge.fury.io/py/yt-thumbss.svg)](https://badge.fury.io/py/yt-thumbss)
-[![Python versions](https://img.shields.io/pypi/pyversions/yt-thumbss.svg)](https://pypi.org/project/yt-thumbss/)
-[![codecov](https://codecov.io/gh/AutumnsGrove/yt-thumbss/branch/main/graph/badge.svg)](https://codecov.io/gh/AutumnsGrove/yt-thumbss)
+[![Tests](https://github.com/AutumnsGrove/yt-thumbs/actions/workflows/test.yml/badge.svg)](https://github.com/AutumnsGrove/yt-thumbs/actions/workflows/test.yml)
+[![PyPI version](https://badge.fury.io/py/yt-thumbs.svg)](https://badge.fury.io/py/yt-thumbs)
+[![Python versions](https://img.shields.io/pypi/pyversions/yt-thumbs.svg)](https://pypi.org/project/yt-thumbs/)
+[![codecov](https://codecov.io/gh/AutumnsGrove/yt-thumbs/branch/main/graph/badge.svg)](https://codecov.io/gh/AutumnsGrove/yt-thumbs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Fast and simple YouTube thumbnail extractor. Get thumbnail URLs or download high-quality thumbnail images from YouTube videos with a single command.
+YouTube thumbnail extractor. Zero dependencies.
 
 ## Features
 
@@ -24,21 +24,21 @@ Fast and simple YouTube thumbnail extractor. Get thumbnail URLs or download high
 Install as a UV tool for global access:
 
 ```bash
-uv tool install yt-thumbss
+uv tool install yt-thumbs
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/yt-thumbss.git
-cd yt-thumbss
+git clone https://github.com/yourusername/yt-thumbs.git
+cd yt-thumbs
 uv tool install .
 ```
 
 ### Using pip
 
 ```bash
-pip install yt-thumbss
+pip install yt-thumbs
 ```
 
 ## Usage
@@ -172,8 +172,8 @@ YouTube provides thumbnail images at predictable URLs based on the video ID. Thi
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/yt-thumbss.git
-cd yt-thumbss
+git clone https://github.com/yourusername/yt-thumbs.git
+cd yt-thumbs
 
 # Install in development mode
 uv pip install -e .
@@ -218,7 +218,7 @@ MIT License - See LICENSE file for details
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Why yt-thumbss?
+## Why yt-thumbs?
 
 - **Fast**: No heavy dependencies like yt-dlp or pytube
 - **Simple**: One command to get what you need

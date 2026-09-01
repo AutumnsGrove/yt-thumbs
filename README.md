@@ -210,6 +210,13 @@ mypy src/yt_thumbs --strict
 - Python 3.10 or higher
 - No external dependencies (uses standard library only)
 
+## Further reading
+
+Public CDN notes for maxres fallback behaviour (no API key required):
+
+- [When maxresdefault 404s but hqdefault still works](https://www.11tik.com/2026/08/what-is-maxresdefaultjpg-when-youtube.html)
+- [300-video thumbnail availability study](https://www.11tik.com/2026/08/youtube-thumbnail-sizes-resolutions-study.html) — in our 300-video sample, 286/300 public IDs returned a valid maxresdefault image (sample-scoped; not population-wide YouTube statistics)
+
 ## License
 
 MIT License - See LICENSE file for details
